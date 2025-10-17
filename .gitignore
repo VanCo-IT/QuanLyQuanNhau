@@ -1,0 +1,47 @@
+# Ignore Visual Studio temporary files, build results, and user-specific files
+
+## Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+*.dll
+*.exe
+*.app
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+## Visual Studio working folder
+.vs/
+
+## Backup & cache
+*.bak
+*.cache
+*.pdb
+*.tmp
+
+## Others
+*.resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider (nếu dùng JetBrains Rider IDE)
+.idea/
+
+# Windows image thumbnail cache
+Thumbs.db
+
+# Windows Installer files
+*.msi
+*.msm
+*.msp
+
+# NuGet packages
+*.nupkg
+packages/
