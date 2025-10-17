@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DTO_QLQuanNhau\DTO_QLQuanNhau.csproj" />
+  </ItemGroup>
+
 </Project>
