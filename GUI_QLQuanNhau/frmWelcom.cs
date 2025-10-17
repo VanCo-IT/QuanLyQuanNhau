@@ -1,10 +1,11 @@
 namespace GUI_QLQuanNhau
 {
-    public partial class Form1 : Form
+    public partial class frmWelcom : Form
     {
-        public Form1()
+        public frmWelcom()
         {
             InitializeComponent();
+
         }
     }
 }

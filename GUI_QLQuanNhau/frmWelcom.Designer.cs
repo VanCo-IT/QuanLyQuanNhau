@@ -1,6 +1,6 @@
 ﻿namespace GUI_QLQuanNhau
 {
-    partial class Form1
+    partial class frmWelcom
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,31 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcom));
+            progressBar = new ProgressBar();
+            pnWelcom = new Panel();
             SuspendLayout();
             // 
-            // button1
+            // progressBar
             // 
-            button1.Location = new Point(626, 87);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            progressBar.Dock = DockStyle.Bottom;
+            progressBar.Location = new Point(0, 538);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(884, 23);
+            progressBar.TabIndex = 0;
             // 
-            // Form1
+            // pnWelcom
+            // 
+            pnWelcom.BackgroundImage = (Image)resources.GetObject("pnWelcom.BackgroundImage");
+            pnWelcom.BackgroundImageLayout = ImageLayout.Stretch;
+            pnWelcom.Dock = DockStyle.Fill;
+            pnWelcom.Location = new Point(0, 0);
+            pnWelcom.Name = "pnWelcom";
+            pnWelcom.Size = new Size(884, 538);
+            pnWelcom.TabIndex = 1;
+            // 
+            // frmWelcom
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Name = "Form1";
+            ClientSize = new Size(884, 561);
+            Controls.Add(pnWelcom);
+            Controls.Add(progressBar);
+            Name = "frmWelcom";
             Text = "Form1sddd";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private ProgressBar progressBar;
+        private Panel pnWelcom;
     }
 }
