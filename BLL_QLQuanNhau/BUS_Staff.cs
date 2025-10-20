@@ -39,26 +39,26 @@ namespace BLL_QLQuanNhau
             }
         }
 
-        public List<Staff> GetNhanVienList()
+        public List<Staff> GetStaffList()
         {
             return dalStaff.selectAll();
         }
 
 
-        public string InsertNhanVien(Staff nv)
+        public string InsertStaff(Staff staff)
         {
             try
             {
-                nv.MaNV = dalStaff.generateMaNhanVien();
-                if (string.IsNullOrEmpty(nv.MaNV))
+                staff.MaNV = dalStaff.generateMaNhanVien();
+                if (string.IsNullOrEmpty(staff.MaNV))
                 {
                     return "Mã nhân viên không hợp lệ.";
                 }
-                if (dalStaff.checkEmailExists(nv.Email))
+                if (dalStaff.checkEmailExists(staff.Email))
                 {
                     return "Email đã tồn tại.";
                 }
-                dalStaff.insertNhanVien(nv);
+                dalStaff.insertStaff(staff);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -68,16 +68,16 @@ namespace BLL_QLQuanNhau
             }
         }
 
-        public string UpdateNhanVien(Staff nv)
+        public string UpdateStaff(Staff staff)
         {
             try
             {
-                if (string.IsNullOrEmpty(nv.MaNV))
+                if (string.IsNullOrEmpty(staff.MaNV))
                 {
                     return "Mã nhân viên không hợp lệ.";
                 }
 
-                dalStaff.updateNhanVien(nv);
+                dalStaff.updateStaff(staff);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -87,7 +87,7 @@ namespace BLL_QLQuanNhau
             }
         }
 
-        public string DeleteNhanVien(string maNV)
+        public string DeleteStaff(string maNV)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace BLL_QLQuanNhau
                     return "Mã nhân viên không hợp lệ.";
                 }
 
-                dalStaff.deleteNhanVien(maNV);
+                dalStaff.deleteStaff(maNV);
                 return string.Empty;
             }
             catch (Exception ex)
