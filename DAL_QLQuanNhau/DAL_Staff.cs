@@ -101,21 +101,21 @@ namespace DAL_QLQuanNhau
             return list.Count > 0 ? list[0] : null;
         }
 
-        public void insertNhanVien(Staff nv)
+        public void insertStaff(Staff staff)
         {
             try
             {
                 string sql = @"INSERT INTO NhanVien (MaNV, TenNV,TenDN,SDT, Email, MatKhau, VaiTro, TrangThai) 
                    VALUES (@0, @1, @2, @3, @4, @5,@6,@7)";
                 List<object> thamSo = new List<object>();
-                thamSo.Add(nv.MaNV);
-                thamSo.Add(nv.TenNV);
-                thamSo.Add(nv.TenDN);
-                thamSo.Add(nv.SDT);
-                thamSo.Add(nv.Email);
-                thamSo.Add(nv.MatKhau);
-                thamSo.Add(nv.VaiTro);
-                thamSo.Add(nv.TrangThai);
+                thamSo.Add(staff.MaNV);
+                thamSo.Add(staff.TenNV);
+                thamSo.Add(staff.TenDN);
+                thamSo.Add(staff.SDT);
+                thamSo.Add(staff.Email);
+                thamSo.Add(staff.MatKhau);
+                thamSo.Add(staff.VaiTro);
+                thamSo.Add(staff.TrangThai);
                 DBUtil.Update(sql, thamSo);
             }
             catch (Exception e)
@@ -125,9 +125,9 @@ namespace DAL_QLQuanNhau
 
         }
 
-        public void updateNhanVien(Staff nv)
+        public void updateStaff(Staff staff)
         {
-            if (nv == null) throw new ArgumentNullException(nameof(nv));
+            if (staff == null) throw new ArgumentNullException(nameof(staff));
             try
             {
                 string sql = @"UPDATE NhanVien 
@@ -136,18 +136,18 @@ namespace DAL_QLQuanNhau
 
                 List<object> thamSo = new List<object>()
         {
-            nv.MaNV,    // @0
-            nv.TenNV,   // @1
-            nv.TenDN,   // @2
-            nv.SDT,     // @3
-            nv.Email,   // @4
-            nv.MatKhau, // @5
-            nv.VaiTro,  // @6
-            nv.TrangThai // @7
+            staff.MaNV,    // @0
+            staff.TenNV,   // @1
+            staff.TenDN,   // @2
+            staff.SDT,     // @3
+            staff.Email,   // @4
+            staff.MatKhau, // @5
+            staff.VaiTro,  // @6
+            staff.TrangThai // @7
         };
                 DBUtil.Update(sql, thamSo);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 // Optional: log error
                 throw;
@@ -155,13 +155,13 @@ namespace DAL_QLQuanNhau
 
         }
 
-        public void deleteNhanVien(string maNv)
+        public void deleteStaff(string maNV)
         {
             try
             {
                 string sql = "DELETE FROM NhanVien WHERE MaNV = @0";
                 List<object> thamSo = new List<object>();
-                thamSo.Add(maNv);
+                thamSo.Add(maNV);
                 DBUtil.Update(sql, thamSo);
             }
             catch (Exception e)
