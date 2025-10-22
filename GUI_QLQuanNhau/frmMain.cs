@@ -16,5 +16,28 @@ namespace GUI_QLQuanNhau
         {
             InitializeComponent();
         }
+        private Form currentFormChild;
+
+        private void openChildForm(Form formChild)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = formChild;
+            formChild.TopLevel = false;
+            formChild.FormBorderStyle = FormBorderStyle.None;
+            formChild.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(formChild);
+            pnMain.Tag = formChild;
+            formChild.BringToFront();
+            formChild.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMK reset = new frmDoiMK();
+            reset.ShowDialog();
+        }
     }
 }
