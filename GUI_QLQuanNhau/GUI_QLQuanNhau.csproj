@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CSDL_QLQuanNhau.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CSDL_QLQuanNhau.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BLL_QLQuanNhau\BLL_QLQuanNhau.csproj" />
     <ProjectReference Include="..\DTO_QLQuanNhau\DTO_QLQuanNhau.csproj" />
     <ProjectReference Include="..\UTIL_QLQuanNhau\UTIL_QLQuanNhau.csproj" />
@@ -27,12 +37,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CSDL_QLQuanNhau.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
