@@ -7,7 +7,7 @@ namespace DAL_QLQuanNhau
     public class DBUtil
     {
         public static string connectionString =
-        $@"Data Source={AppDomain.CurrentDomain.BaseDirectory}CSDL_QuanNhau.db;Version=3;";
+        $@"Data Source={AppDomain.CurrentDomain.BaseDirectory}\CSDL_QLQuanNhau.db;Version=3;";
 
         public static SQLiteCommand GetCommand(string sql, List<object> args, CommandType cmdType)
         {
@@ -64,7 +64,7 @@ namespace DAL_QLQuanNhau
                 Console.WriteLine("Param: " + p);
             }
             cmd.Connection.Open();
-            return cmd.ExecuteReader(CommandBehavior.CloseConnection);// sai?
+            return cmd.ExecuteReader(CommandBehavior.CloseConnection);// nếu sai thì xem cái tên .db mà sửa cái kết nối, than than cái lìn nhé bản thân
         }
 
         public static T Value<T>(string sql, List<object> args, CommandType cmdType = CommandType.Text) where T : new()
