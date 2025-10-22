@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             pictureBox1 = new PictureBox();
             pnLogin = new Panel();
+            btnThoat = new Button();
+            btnDangNhap = new Button();
+            cbQuenMK = new CheckBox();
+            cbHienMK = new CheckBox();
             label3 = new Label();
             pbLogo = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -52,7 +56,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(617, 561);
+            pictureBox1.Size = new Size(612, 561);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -60,6 +64,10 @@
             // pnLogin
             // 
             pnLogin.BackColor = Color.Cyan;
+            pnLogin.Controls.Add(btnThoat);
+            pnLogin.Controls.Add(btnDangNhap);
+            pnLogin.Controls.Add(cbQuenMK);
+            pnLogin.Controls.Add(cbHienMK);
             pnLogin.Controls.Add(label3);
             pnLogin.Controls.Add(pbLogo);
             pnLogin.Controls.Add(pictureBox3);
@@ -69,10 +77,57 @@
             pnLogin.Controls.Add(label2);
             pnLogin.Controls.Add(label1);
             pnLogin.Dock = DockStyle.Fill;
-            pnLogin.Location = new Point(617, 0);
+            pnLogin.Location = new Point(612, 0);
             pnLogin.Name = "pnLogin";
-            pnLogin.Size = new Size(267, 561);
+            pnLogin.Size = new Size(272, 561);
             pnLogin.TabIndex = 1;
+            // 
+            // btnThoat
+            // 
+            btnThoat.BackColor = Color.FromArgb(255, 128, 0);
+            btnThoat.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnThoat.Location = new Point(154, 400);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(78, 59);
+            btnThoat.TabIndex = 11;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
+            // 
+            // btnDangNhap
+            // 
+            btnDangNhap.BackColor = Color.FromArgb(255, 128, 0);
+            btnDangNhap.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnDangNhap.Location = new Point(22, 400);
+            btnDangNhap.Name = "btnDangNhap";
+            btnDangNhap.Size = new Size(84, 59);
+            btnDangNhap.TabIndex = 10;
+            btnDangNhap.Text = "Đăng nhập";
+            btnDangNhap.UseVisualStyleBackColor = false;
+            btnDangNhap.Click += btnDangNhap_Click;
+            // 
+            // cbQuenMK
+            // 
+            cbQuenMK.AutoSize = true;
+            cbQuenMK.Font = new Font("Segoe UI", 10F);
+            cbQuenMK.Location = new Point(145, 320);
+            cbQuenMK.Name = "cbQuenMK";
+            cbQuenMK.Size = new Size(87, 23);
+            cbQuenMK.TabIndex = 9;
+            cbQuenMK.Text = "Quên MK";
+            cbQuenMK.UseVisualStyleBackColor = true;
+            // 
+            // cbHienMK
+            // 
+            cbHienMK.AutoSize = true;
+            cbHienMK.Font = new Font("Segoe UI", 10F);
+            cbHienMK.Location = new Point(15, 320);
+            cbHienMK.Name = "cbHienMK";
+            cbHienMK.Size = new Size(81, 23);
+            cbHienMK.TabIndex = 8;
+            cbHienMK.Text = "Hiện MK";
+            cbHienMK.UseVisualStyleBackColor = true;
+            cbHienMK.CheckedChanged += cbHienMK_CheckedChanged;
             // 
             // label3
             // 
@@ -120,7 +175,8 @@
             txtMatKhau.Font = new Font("Segoe UI", 10F);
             txtMatKhau.Location = new Point(14, 272);
             txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(178, 25);
+            txtMatKhau.PasswordChar = '*';
+            txtMatKhau.Size = new Size(250, 25);
             txtMatKhau.TabIndex = 3;
             // 
             // txtEmail
@@ -128,7 +184,7 @@
             txtEmail.Font = new Font("Segoe UI", 10F);
             txtEmail.Location = new Point(14, 176);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(178, 25);
+            txtEmail.Size = new Size(250, 25);
             txtEmail.TabIndex = 2;
             // 
             // label2
@@ -160,6 +216,7 @@
             Controls.Add(pictureBox1);
             Name = "frmLogin";
             Text = "frmLogin";
+            FormClosing += frmLogin_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnLogin.ResumeLayout(false);
             pnLogin.PerformLayout();
@@ -181,5 +238,9 @@
         private Label label2;
         private Label label3;
         private PictureBox pbLogo;
+        private CheckBox cbHienMK;
+        private Button btnDangNhap;
+        private CheckBox cbQuenMK;
+        private Button btnThoat;
     }
 }
