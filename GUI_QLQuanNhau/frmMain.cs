@@ -81,5 +81,10 @@ namespace GUI_QLQuanNhau
                 Application.Exit();
             }
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmStaff());
+        }
     }
 }
