@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTIL_QLQuanNhau;
 
 namespace GUI_QLQuanNhau
 {
@@ -46,6 +47,39 @@ namespace GUI_QLQuanNhau
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new frmThongTinTaiKhoan(currentStaff));
+        }
+
+        private void đăngXuấtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //mnuKhachHang.Visible = false;
+            //mnuGiaoDich.Visible = false;
+            //mnuKhoanvay.Visible = false;
+            //mnuNhanVien.Visible = false;
+            //mnuTroGiup.Visible = false;
+            // có chức năng gì thì cho nó false là xong
+            DialogResult result = MessageBox.Show("Bạn muốn đăng xuất?", "Đăng xuất",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+               );
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                AuthUtil.user = null;
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
+        }
+
+        private void thoátỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn muốn thoát khỏi chương trình", "Thoát",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+               );
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

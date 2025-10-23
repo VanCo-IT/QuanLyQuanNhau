@@ -86,6 +86,7 @@
             đăngXuấtTàiKhoảnToolStripMenuItem.Name = "đăngXuấtTàiKhoảnToolStripMenuItem";
             đăngXuấtTàiKhoảnToolStripMenuItem.Size = new Size(211, 24);
             đăngXuấtTàiKhoảnToolStripMenuItem.Text = "Đăng xuất tài khoản";
+            đăngXuấtTàiKhoảnToolStripMenuItem.Click += đăngXuấtTàiKhoảnToolStripMenuItem_Click;
             // 
             // thoátỨngDụngToolStripMenuItem
             // 
@@ -95,6 +96,7 @@
             thoátỨngDụngToolStripMenuItem.Name = "thoátỨngDụngToolStripMenuItem";
             thoátỨngDụngToolStripMenuItem.Size = new Size(211, 24);
             thoátỨngDụngToolStripMenuItem.Text = "Thoát ứng dụng";
+            thoátỨngDụngToolStripMenuItem.Click += thoátỨngDụngToolStripMenuItem_Click;
             // 
             // pnMain
             // 
