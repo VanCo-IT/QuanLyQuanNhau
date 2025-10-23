@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO_QLQuanNhau;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace GUI_QLQuanNhau
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private Staff currentStaff;
+        public frmMain(Staff staff)
         {
             InitializeComponent();
+            currentStaff = staff;
         }
         private Form currentFormChild;
 
@@ -38,6 +41,11 @@ namespace GUI_QLQuanNhau
         {
             frmDoiMK reset = new frmDoiMK();
             reset.ShowDialog();
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThongTinTaiKhoan(currentStaff));
         }
     }
 }

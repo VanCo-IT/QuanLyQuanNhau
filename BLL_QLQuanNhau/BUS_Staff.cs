@@ -43,6 +43,10 @@ namespace BLL_QLQuanNhau
         {
             return dalStaff.selectAll();
         }
+        public Staff GetStaffByID(string id)
+        {
+            return dalStaff.selectById(id);
+        }
 
 
         public string InsertStaff(Staff staff)

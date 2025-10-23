@@ -52,7 +52,7 @@ namespace GUI_QLQuanNhau
                 }
                 AuthUtil.user = nv;
 
-                frmMain main = new frmMain();
+                frmMain main = new frmMain(nv);
                 main.Show();
                 this.Hide();
             }

@@ -76,6 +76,7 @@
             thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
             thôngTinTàiKhoảnToolStripMenuItem.Size = new Size(211, 24);
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            thôngTinTàiKhoảnToolStripMenuItem.Click += thôngTinTàiKhoảnToolStripMenuItem_Click;
             // 
             // đăngXuấtTàiKhoảnToolStripMenuItem
             // 
