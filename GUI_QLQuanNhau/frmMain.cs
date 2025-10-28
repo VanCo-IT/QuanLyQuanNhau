@@ -86,5 +86,10 @@ namespace GUI_QLQuanNhau
         {
             openChildForm(new frmStaff());
         }
+
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThanhToan());
+        }
     }
 }

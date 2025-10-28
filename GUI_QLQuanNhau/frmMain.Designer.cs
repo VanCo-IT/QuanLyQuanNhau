@@ -39,7 +39,6 @@
             khoToolStripMenuItem = new ToolStripMenuItem();
             nhàCungCấpToolStripMenuItem = new ToolStripMenuItem();
             nhânViênToolStripMenuItem = new ToolStripMenuItem();
-            pnMain = new Panel();
             hóaĐơnToolStripMenuItem = new ToolStripMenuItem();
             hóaĐơnToolStripMenuItem1 = new ToolStripMenuItem();
             chiTiếtHóaĐơnToolStripMenuItem = new ToolStripMenuItem();
@@ -47,6 +46,7 @@
             bànToolStripMenuItem = new ToolStripMenuItem();
             mónToolStripMenuItem = new ToolStripMenuItem();
             thanhToánToolStripMenuItem = new ToolStripMenuItem();
+            pnMain = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -122,7 +122,7 @@
             khoToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             khoToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             khoToolStripMenuItem.Name = "khoToolStripMenuItem";
-            khoToolStripMenuItem.Size = new Size(180, 24);
+            khoToolStripMenuItem.Size = new Size(169, 24);
             khoToolStripMenuItem.Text = "Kho";
             // 
             // nhàCungCấpToolStripMenuItem
@@ -130,7 +130,7 @@
             nhàCungCấpToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             nhàCungCấpToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            nhàCungCấpToolStripMenuItem.Size = new Size(180, 24);
+            nhàCungCấpToolStripMenuItem.Size = new Size(169, 24);
             nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
             // 
             // nhânViênToolStripMenuItem
@@ -139,14 +139,6 @@
             nhânViênToolStripMenuItem.Size = new Size(73, 24);
             nhânViênToolStripMenuItem.Text = "Nhân viên";
             nhânViênToolStripMenuItem.Click += nhânViênToolStripMenuItem_Click;
-            // 
-            // pnMain
-            // 
-            pnMain.Dock = DockStyle.Fill;
-            pnMain.Location = new Point(0, 28);
-            pnMain.Name = "pnMain";
-            pnMain.Size = new Size(900, 600);
-            pnMain.TabIndex = 1;
             // 
             // hóaĐơnToolStripMenuItem
             // 
@@ -158,13 +150,13 @@
             // hóaĐơnToolStripMenuItem1
             // 
             hóaĐơnToolStripMenuItem1.Name = "hóaĐơnToolStripMenuItem1";
-            hóaĐơnToolStripMenuItem1.Size = new Size(180, 22);
+            hóaĐơnToolStripMenuItem1.Size = new Size(159, 22);
             hóaĐơnToolStripMenuItem1.Text = "Hóa đơn";
             // 
             // chiTiếtHóaĐơnToolStripMenuItem
             // 
             chiTiếtHóaĐơnToolStripMenuItem.Name = "chiTiếtHóaĐơnToolStripMenuItem";
-            chiTiếtHóaĐơnToolStripMenuItem.Size = new Size(180, 22);
+            chiTiếtHóaĐơnToolStripMenuItem.Size = new Size(159, 22);
             chiTiếtHóaĐơnToolStripMenuItem.Text = "Chi tiết hóa đơn";
             // 
             // thẻLưuĐộngToolStripMenuItem
@@ -177,13 +169,13 @@
             // bànToolStripMenuItem
             // 
             bànToolStripMenuItem.Name = "bànToolStripMenuItem";
-            bànToolStripMenuItem.Size = new Size(180, 22);
+            bànToolStripMenuItem.Size = new Size(99, 22);
             bànToolStripMenuItem.Text = "Bàn ";
             // 
             // mónToolStripMenuItem
             // 
             mónToolStripMenuItem.Name = "mónToolStripMenuItem";
-            mónToolStripMenuItem.Size = new Size(180, 22);
+            mónToolStripMenuItem.Size = new Size(99, 22);
             mónToolStripMenuItem.Text = "Món";
             // 
             // thanhToánToolStripMenuItem
@@ -191,6 +183,15 @@
             thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
             thanhToánToolStripMenuItem.Size = new Size(80, 24);
             thanhToánToolStripMenuItem.Text = "Thanh toán";
+            thanhToánToolStripMenuItem.Click += thanhToánToolStripMenuItem_Click;
+            // 
+            // pnMain
+            // 
+            pnMain.Dock = DockStyle.Fill;
+            pnMain.Location = new Point(0, 28);
+            pnMain.Name = "pnMain";
+            pnMain.Size = new Size(900, 600);
+            pnMain.TabIndex = 1;
             // 
             // frmMain
             // 
