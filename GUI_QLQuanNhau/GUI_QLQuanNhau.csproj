@@ -13,12 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="CSDL_QLQuanNhau.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BLL_QLQuanNhau\BLL_QLQuanNhau.csproj" />
     <ProjectReference Include="..\DTO_QLQuanNhau\DTO_QLQuanNhau.csproj" />
     <ProjectReference Include="..\UTIL_QLQuanNhau\UTIL_QLQuanNhau.csproj" />
