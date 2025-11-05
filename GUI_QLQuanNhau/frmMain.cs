@@ -91,5 +91,10 @@ namespace GUI_QLQuanNhau
         {
             openChildForm(new frmThanhToan());
         }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmKhachHang());
+        }
     }
 }
