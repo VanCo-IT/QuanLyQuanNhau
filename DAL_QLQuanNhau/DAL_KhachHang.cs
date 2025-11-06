@@ -57,7 +57,7 @@ namespace DAL_QLQuanNhau
             try
             {
                 string sql = @"INSERT INTO KhachHang (MaKH, TenKH,SDT,Email,DiaChi,LoaiKH,MoTa) 
-                   VALUES (@0, @1, @2, @3, @4, @5,@6,@7,@8,@9,@10)";
+                   VALUES (@0, @1, @2, @3, @4, @5,@6)";
                 List<object> thamSo = new List<object>();
                 thamSo.Add(kh.MaKH);
                 thamSo.Add(kh.TenKH);
