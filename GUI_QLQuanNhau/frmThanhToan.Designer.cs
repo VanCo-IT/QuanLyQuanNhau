@@ -38,21 +38,21 @@
             label6 = new Label();
             textBox1 = new TextBox();
             label5 = new Label();
-            comboBox1 = new ComboBox();
+            cbHinhThuc = new ComboBox();
             label4 = new Label();
             txtSoTien = new TextBox();
             label3 = new Label();
             cbMaKH = new ComboBox();
             label2 = new Label();
-            txtMaThanhToan = new TextBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             gbChucNang = new GroupBox();
-            dgvThanhToan = new DataGridView();
-            btnThem = new Button();
-            btnCapNhat = new Button();
-            btnLamMoi = new Button();
             btnXuatHoaDon = new Button();
+            btnLamMoi = new Button();
+            btnCapNhat = new Button();
+            btnThem = new Button();
+            dgvThanhToan = new DataGridView();
+            cbMaThanhToan = new ComboBox();
             pnifnormation.SuspendLayout();
             pnTrangThai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,18 +63,18 @@
             // pnifnormation
             // 
             pnifnormation.BackColor = Color.FromArgb(255, 224, 192);
+            pnifnormation.Controls.Add(cbMaThanhToan);
             pnifnormation.Controls.Add(dateTimePicker1);
             pnifnormation.Controls.Add(pnTrangThai);
             pnifnormation.Controls.Add(label6);
             pnifnormation.Controls.Add(textBox1);
             pnifnormation.Controls.Add(label5);
-            pnifnormation.Controls.Add(comboBox1);
+            pnifnormation.Controls.Add(cbHinhThuc);
             pnifnormation.Controls.Add(label4);
             pnifnormation.Controls.Add(txtSoTien);
             pnifnormation.Controls.Add(label3);
             pnifnormation.Controls.Add(cbMaKH);
             pnifnormation.Controls.Add(label2);
-            pnifnormation.Controls.Add(txtMaThanhToan);
             pnifnormation.Controls.Add(label1);
             pnifnormation.Controls.Add(pictureBox1);
             pnifnormation.Dock = DockStyle.Top;
@@ -158,14 +158,14 @@
             label5.TabIndex = 1;
             label5.Text = "Mô tả";
             // 
-            // comboBox1
+            // cbHinhThuc
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Tiền mặt", "Chuyển khoản", "Quẹt thẻ(máy pos)" });
-            comboBox1.Location = new Point(243, 79);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(135, 23);
-            comboBox1.TabIndex = 7;
+            cbHinhThuc.FormattingEnabled = true;
+            cbHinhThuc.Items.AddRange(new object[] { "Tiền mặt", "Chuyển khoản", "Quẹt thẻ(máy pos)" });
+            cbHinhThuc.Location = new Point(243, 79);
+            cbHinhThuc.Name = "cbHinhThuc";
+            cbHinhThuc.Size = new Size(135, 23);
+            cbHinhThuc.TabIndex = 7;
             // 
             // label4
             // 
@@ -209,13 +209,6 @@
             label2.TabIndex = 3;
             label2.Text = "Mã khách hàng";
             // 
-            // txtMaThanhToan
-            // 
-            txtMaThanhToan.Location = new Point(94, 29);
-            txtMaThanhToan.Name = "txtMaThanhToan";
-            txtMaThanhToan.Size = new Size(135, 23);
-            txtMaThanhToan.TabIndex = 2;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -251,38 +244,16 @@
             gbChucNang.TabStop = false;
             gbChucNang.Text = "Chức năng";
             // 
-            // dgvThanhToan
+            // btnXuatHoaDon
             // 
-            dgvThanhToan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvThanhToan.Dock = DockStyle.Fill;
-            dgvThanhToan.Location = new Point(0, 112);
-            dgvThanhToan.Name = "dgvThanhToan";
-            dgvThanhToan.Size = new Size(666, 449);
-            dgvThanhToan.TabIndex = 2;
-            // 
-            // btnThem
-            // 
-            btnThem.Image = (Image)resources.GetObject("btnThem.Image");
-            btnThem.ImageAlign = ContentAlignment.TopCenter;
-            btnThem.Location = new Point(6, 92);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(90, 66);
-            btnThem.TabIndex = 0;
-            btnThem.Text = "Thêm";
-            btnThem.TextAlign = ContentAlignment.BottomCenter;
-            btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhat
-            // 
-            btnCapNhat.Image = (Image)resources.GetObject("btnCapNhat.Image");
-            btnCapNhat.ImageAlign = ContentAlignment.TopCenter;
-            btnCapNhat.Location = new Point(123, 92);
-            btnCapNhat.Name = "btnCapNhat";
-            btnCapNhat.Size = new Size(90, 66);
-            btnCapNhat.TabIndex = 1;
-            btnCapNhat.Text = "Cập nhật";
-            btnCapNhat.TextAlign = ContentAlignment.BottomCenter;
-            btnCapNhat.UseVisualStyleBackColor = true;
+            btnXuatHoaDon.Image = (Image)resources.GetObject("btnXuatHoaDon.Image");
+            btnXuatHoaDon.Location = new Point(128, 195);
+            btnXuatHoaDon.Name = "btnXuatHoaDon";
+            btnXuatHoaDon.Size = new Size(83, 83);
+            btnXuatHoaDon.TabIndex = 3;
+            btnXuatHoaDon.Text = "Hóa đơn";
+            btnXuatHoaDon.TextAlign = ContentAlignment.BottomCenter;
+            btnXuatHoaDon.UseVisualStyleBackColor = true;
             // 
             // btnLamMoi
             // 
@@ -296,16 +267,46 @@
             btnLamMoi.TextAlign = ContentAlignment.BottomCenter;
             btnLamMoi.UseVisualStyleBackColor = true;
             // 
-            // btnXuatHoaDon
+            // btnCapNhat
             // 
-            btnXuatHoaDon.Image = (Image)resources.GetObject("btnXuatHoaDon.Image");
-            btnXuatHoaDon.Location = new Point(128, 195);
-            btnXuatHoaDon.Name = "btnXuatHoaDon";
-            btnXuatHoaDon.Size = new Size(83, 83);
-            btnXuatHoaDon.TabIndex = 3;
-            btnXuatHoaDon.Text = "Hóa đơn";
-            btnXuatHoaDon.TextAlign = ContentAlignment.BottomCenter;
-            btnXuatHoaDon.UseVisualStyleBackColor = true;
+            btnCapNhat.Image = (Image)resources.GetObject("btnCapNhat.Image");
+            btnCapNhat.ImageAlign = ContentAlignment.TopCenter;
+            btnCapNhat.Location = new Point(123, 92);
+            btnCapNhat.Name = "btnCapNhat";
+            btnCapNhat.Size = new Size(90, 66);
+            btnCapNhat.TabIndex = 1;
+            btnCapNhat.Text = "Cập nhật";
+            btnCapNhat.TextAlign = ContentAlignment.BottomCenter;
+            btnCapNhat.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            btnThem.Image = (Image)resources.GetObject("btnThem.Image");
+            btnThem.ImageAlign = ContentAlignment.TopCenter;
+            btnThem.Location = new Point(6, 92);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(90, 66);
+            btnThem.TabIndex = 0;
+            btnThem.Text = "Thêm";
+            btnThem.TextAlign = ContentAlignment.BottomCenter;
+            btnThem.UseVisualStyleBackColor = true;
+            // 
+            // dgvThanhToan
+            // 
+            dgvThanhToan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvThanhToan.Dock = DockStyle.Fill;
+            dgvThanhToan.Location = new Point(0, 112);
+            dgvThanhToan.Name = "dgvThanhToan";
+            dgvThanhToan.Size = new Size(666, 449);
+            dgvThanhToan.TabIndex = 2;
+            // 
+            // cbMaThanhToan
+            // 
+            cbMaThanhToan.FormattingEnabled = true;
+            cbMaThanhToan.Location = new Point(94, 29);
+            cbMaThanhToan.Name = "cbMaThanhToan";
+            cbMaThanhToan.Size = new Size(135, 23);
+            cbMaThanhToan.TabIndex = 14;
             // 
             // frmThanhToan
             // 
@@ -335,7 +336,7 @@
         private TextBox txtMaThanhToan;
         private ComboBox cbMaKH;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cbHinhThuc;
         private Label label4;
         private TextBox txtSoTien;
         private Label label3;
@@ -353,5 +354,6 @@
         private Button btnXuatHoaDon;
         private Button btnLamMoi;
         private Button btnCapNhat;
+        private ComboBox cbMaThanhToan;
     }
 }
