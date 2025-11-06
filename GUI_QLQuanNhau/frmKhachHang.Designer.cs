@@ -30,27 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             pnThongTinKhachHang = new Panel();
-            pbKhachHang = new PictureBox();
-            label1 = new Label();
-            txtMaKH = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            txtTenKH = new TextBox();
-            txtSDT = new TextBox();
-            txtEmail = new TextBox();
-            txtDiaChi = new TextBox();
-            txtLoaiKH = new TextBox();
+            cbMaKH = new ComboBox();
+            cbLoaiKhachHang = new ComboBox();
             txtMoTa = new TextBox();
+            txtDiaChi = new TextBox();
+            txtEmail = new TextBox();
+            txtSDT = new TextBox();
+            txtTenKH = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            pbKhachHang = new PictureBox();
             gbChucNang = new GroupBox();
-            dgvKhachHang = new DataGridView();
-            btnThem = new Button();
-            btnCapNhat = new Button();
-            btnXoa = new Button();
             btnLamMoi = new Button();
+            btnXoa = new Button();
+            btnCapNhat = new Button();
+            btnThem = new Button();
+            dgvKhachHang = new DataGridView();
             pnThongTinKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbKhachHang).BeginInit();
             gbChucNang.SuspendLayout();
@@ -60,8 +60,9 @@
             // pnThongTinKhachHang
             // 
             pnThongTinKhachHang.BackColor = Color.FromArgb(128, 255, 128);
+            pnThongTinKhachHang.Controls.Add(cbMaKH);
+            pnThongTinKhachHang.Controls.Add(cbLoaiKhachHang);
             pnThongTinKhachHang.Controls.Add(txtMoTa);
-            pnThongTinKhachHang.Controls.Add(txtLoaiKH);
             pnThongTinKhachHang.Controls.Add(txtDiaChi);
             pnThongTinKhachHang.Controls.Add(txtEmail);
             pnThongTinKhachHang.Controls.Add(txtSDT);
@@ -72,7 +73,6 @@
             pnThongTinKhachHang.Controls.Add(label4);
             pnThongTinKhachHang.Controls.Add(label3);
             pnThongTinKhachHang.Controls.Add(label2);
-            pnThongTinKhachHang.Controls.Add(txtMaKH);
             pnThongTinKhachHang.Controls.Add(label1);
             pnThongTinKhachHang.Controls.Add(pbKhachHang);
             pnThongTinKhachHang.Dock = DockStyle.Top;
@@ -80,6 +80,122 @@
             pnThongTinKhachHang.Name = "pnThongTinKhachHang";
             pnThongTinKhachHang.Size = new Size(884, 110);
             pnThongTinKhachHang.TabIndex = 0;
+            // 
+            // cbMaKH
+            // 
+            cbMaKH.FormattingEnabled = true;
+            cbMaKH.Location = new Point(116, 29);
+            cbMaKH.Name = "cbMaKH";
+            cbMaKH.Size = new Size(133, 23);
+            cbMaKH.TabIndex = 16;
+            cbMaKH.SelectedIndexChanged += cbMaKH_SelectedIndexChanged;
+            // 
+            // cbLoaiKhachHang
+            // 
+            cbLoaiKhachHang.FormattingEnabled = true;
+            cbLoaiKhachHang.Items.AddRange(new object[] { "Khách lẻ", "Khách quen", "Khách tiềm năng", "Khách Vip", "Khách khó tính", "Sổ đen" });
+            cbLoaiKhachHang.Location = new Point(279, 87);
+            cbLoaiKhachHang.Name = "cbLoaiKhachHang";
+            cbLoaiKhachHang.Size = new Size(130, 23);
+            cbLoaiKhachHang.TabIndex = 15;
+            // 
+            // txtMoTa
+            // 
+            txtMoTa.Location = new Point(448, 87);
+            txtMoTa.Name = "txtMoTa";
+            txtMoTa.Size = new Size(130, 23);
+            txtMoTa.TabIndex = 14;
+            // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Location = new Point(119, 84);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(130, 23);
+            txtDiaChi.TabIndex = 12;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(607, 27);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(130, 23);
+            txtEmail.TabIndex = 11;
+            // 
+            // txtSDT
+            // 
+            txtSDT.Location = new Point(448, 26);
+            txtSDT.Name = "txtSDT";
+            txtSDT.Size = new Size(130, 23);
+            txtSDT.TabIndex = 10;
+            // 
+            // txtTenKH
+            // 
+            txtTenKH.Location = new Point(279, 26);
+            txtTenKH.Name = "txtTenKH";
+            txtTenKH.Size = new Size(130, 23);
+            txtTenKH.TabIndex = 9;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(448, 68);
+            label7.Name = "label7";
+            label7.Size = new Size(38, 15);
+            label7.TabIndex = 8;
+            label7.Text = "Mô tả";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(279, 66);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 15);
+            label6.TabIndex = 7;
+            label6.Text = "Loại khách hàng";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(119, 66);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 15);
+            label5.TabIndex = 6;
+            label5.Text = "Địa chỉ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(607, 6);
+            label4.Name = "label4";
+            label4.Size = new Size(36, 15);
+            label4.TabIndex = 5;
+            label4.Text = "Email";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(448, 6);
+            label3.Name = "label3";
+            label3.Size = new Size(27, 15);
+            label3.TabIndex = 4;
+            label3.Text = "SDT";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(282, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Tên khách hàng";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(119, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Mã khách hàng";
             // 
             // pbKhachHang
             // 
@@ -91,118 +207,6 @@
             pbKhachHang.SizeMode = PictureBoxSizeMode.StretchImage;
             pbKhachHang.TabIndex = 0;
             pbKhachHang.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(119, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(89, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Mã khách hàng";
-            // 
-            // txtMaKH
-            // 
-            txtMaKH.Location = new Point(119, 27);
-            txtMaKH.Name = "txtMaKH";
-            txtMaKH.Size = new Size(130, 23);
-            txtMaKH.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(282, 3);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Tên khách hàng";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(448, 6);
-            label3.Name = "label3";
-            label3.Size = new Size(27, 15);
-            label3.TabIndex = 4;
-            label3.Text = "SDT";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(607, 6);
-            label4.Name = "label4";
-            label4.Size = new Size(36, 15);
-            label4.TabIndex = 5;
-            label4.Text = "Email";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(119, 66);
-            label5.Name = "label5";
-            label5.Size = new Size(43, 15);
-            label5.TabIndex = 6;
-            label5.Text = "Địa chỉ";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(279, 66);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 15);
-            label6.TabIndex = 7;
-            label6.Text = "Loại khách hàng";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(448, 68);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 8;
-            label7.Text = "Mô tả";
-            // 
-            // txtTenKH
-            // 
-            txtTenKH.Location = new Point(279, 26);
-            txtTenKH.Name = "txtTenKH";
-            txtTenKH.Size = new Size(130, 23);
-            txtTenKH.TabIndex = 9;
-            // 
-            // txtSDT
-            // 
-            txtSDT.Location = new Point(448, 26);
-            txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(130, 23);
-            txtSDT.TabIndex = 10;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(607, 27);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(130, 23);
-            txtEmail.TabIndex = 11;
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.Location = new Point(119, 84);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(130, 23);
-            txtDiaChi.TabIndex = 12;
-            // 
-            // txtLoaiKH
-            // 
-            txtLoaiKH.Location = new Point(279, 84);
-            txtLoaiKH.Name = "txtLoaiKH";
-            txtLoaiKH.Size = new Size(130, 23);
-            txtLoaiKH.TabIndex = 13;
-            // 
-            // txtMoTa
-            // 
-            txtMoTa.Location = new Point(448, 87);
-            txtMoTa.Name = "txtMoTa";
-            txtMoTa.Size = new Size(130, 23);
-            txtMoTa.TabIndex = 14;
             // 
             // gbChucNang
             // 
@@ -219,38 +223,17 @@
             gbChucNang.TabStop = false;
             gbChucNang.Text = "Chức năng";
             // 
-            // dgvKhachHang
+            // btnLamMoi
             // 
-            dgvKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKhachHang.Dock = DockStyle.Fill;
-            dgvKhachHang.Location = new Point(0, 110);
-            dgvKhachHang.Name = "dgvKhachHang";
-            dgvKhachHang.Size = new Size(684, 451);
-            dgvKhachHang.TabIndex = 2;
-            // 
-            // btnThem
-            // 
-            btnThem.Image = (Image)resources.GetObject("btnThem.Image");
-            btnThem.ImageAlign = ContentAlignment.TopCenter;
-            btnThem.Location = new Point(6, 105);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(79, 66);
-            btnThem.TabIndex = 3;
-            btnThem.Text = "Thêm";
-            btnThem.TextAlign = ContentAlignment.BottomCenter;
-            btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhat
-            // 
-            btnCapNhat.Image = (Image)resources.GetObject("btnCapNhat.Image");
-            btnCapNhat.ImageAlign = ContentAlignment.TopCenter;
-            btnCapNhat.Location = new Point(108, 105);
-            btnCapNhat.Name = "btnCapNhat";
-            btnCapNhat.Size = new Size(75, 66);
-            btnCapNhat.TabIndex = 4;
-            btnCapNhat.Text = "Cập nhật";
-            btnCapNhat.TextAlign = ContentAlignment.BottomCenter;
-            btnCapNhat.UseVisualStyleBackColor = true;
+            btnLamMoi.BackgroundImage = (Image)resources.GetObject("btnLamMoi.BackgroundImage");
+            btnLamMoi.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLamMoi.ImageAlign = ContentAlignment.TopCenter;
+            btnLamMoi.Location = new Point(113, 205);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(75, 68);
+            btnLamMoi.TabIndex = 6;
+            btnLamMoi.TextAlign = ContentAlignment.BottomCenter;
+            btnLamMoi.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
@@ -264,17 +247,39 @@
             btnXoa.TextAlign = ContentAlignment.BottomCenter;
             btnXoa.UseVisualStyleBackColor = true;
             // 
-            // btnLamMoi
+            // btnCapNhat
             // 
-            btnLamMoi.BackgroundImage = (Image)resources.GetObject("btnLamMoi.BackgroundImage");
-            btnLamMoi.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLamMoi.ImageAlign = ContentAlignment.TopCenter;
-            btnLamMoi.Location = new Point(113, 205);
-            btnLamMoi.Name = "btnLamMoi";
-            btnLamMoi.Size = new Size(75, 68);
-            btnLamMoi.TabIndex = 6;
-            btnLamMoi.TextAlign = ContentAlignment.BottomCenter;
-            btnLamMoi.UseVisualStyleBackColor = true;
+            btnCapNhat.Image = (Image)resources.GetObject("btnCapNhat.Image");
+            btnCapNhat.ImageAlign = ContentAlignment.TopCenter;
+            btnCapNhat.Location = new Point(108, 105);
+            btnCapNhat.Name = "btnCapNhat";
+            btnCapNhat.Size = new Size(75, 66);
+            btnCapNhat.TabIndex = 4;
+            btnCapNhat.Text = "Cập nhật";
+            btnCapNhat.TextAlign = ContentAlignment.BottomCenter;
+            btnCapNhat.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            btnThem.Image = (Image)resources.GetObject("btnThem.Image");
+            btnThem.ImageAlign = ContentAlignment.TopCenter;
+            btnThem.Location = new Point(6, 105);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(79, 66);
+            btnThem.TabIndex = 3;
+            btnThem.Text = "Thêm";
+            btnThem.TextAlign = ContentAlignment.BottomCenter;
+            btnThem.UseVisualStyleBackColor = true;
+            // 
+            // dgvKhachHang
+            // 
+            dgvKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvKhachHang.Dock = DockStyle.Fill;
+            dgvKhachHang.Location = new Point(0, 110);
+            dgvKhachHang.Name = "dgvKhachHang";
+            dgvKhachHang.Size = new Size(684, 451);
+            dgvKhachHang.TabIndex = 2;
+            dgvKhachHang.CellDoubleClick += dgvKhachHang_CellDoubleClick;
             // 
             // frmKhachHang
             // 
@@ -286,6 +291,7 @@
             Controls.Add(pnThongTinKhachHang);
             Name = "frmKhachHang";
             Text = "Khách hàng";
+            Load += frmKhachHang_Load;
             pnThongTinKhachHang.ResumeLayout(false);
             pnThongTinKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbKhachHang).EndInit();
@@ -301,13 +307,11 @@
         private PictureBox pbKhachHang;
         private Label label3;
         private Label label2;
-        private TextBox txtMaKH;
         private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private TextBox txtMoTa;
-        private TextBox txtLoaiKH;
         private TextBox txtDiaChi;
         private TextBox txtEmail;
         private TextBox txtSDT;
@@ -318,5 +322,7 @@
         private Button btnLamMoi;
         private Button btnXoa;
         private Button btnCapNhat;
+        private ComboBox cbLoaiKhachHang;
+        private ComboBox cbMaKH;
     }
 }
