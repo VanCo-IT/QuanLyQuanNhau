@@ -83,6 +83,7 @@
             // 
             // cbMaKH
             // 
+            cbMaKH.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMaKH.FormattingEnabled = true;
             cbMaKH.Location = new Point(116, 29);
             cbMaKH.Name = "cbMaKH";
@@ -92,6 +93,7 @@
             // 
             // cbLoaiKhachHang
             // 
+            cbLoaiKhachHang.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLoaiKhachHang.FormattingEnabled = true;
             cbLoaiKhachHang.Items.AddRange(new object[] { "Khách lẻ", "Khách quen", "Khách tiềm năng", "Khách Vip", "Khách khó tính", "Sổ đen" });
             cbLoaiKhachHang.Location = new Point(279, 87);
@@ -234,6 +236,7 @@
             btnLamMoi.TabIndex = 6;
             btnLamMoi.TextAlign = ContentAlignment.BottomCenter;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnXoa
             // 
@@ -246,6 +249,7 @@
             btnXoa.Text = "Xóa";
             btnXoa.TextAlign = ContentAlignment.BottomCenter;
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnCapNhat
             // 
@@ -258,6 +262,7 @@
             btnCapNhat.Text = "Cập nhật";
             btnCapNhat.TextAlign = ContentAlignment.BottomCenter;
             btnCapNhat.UseVisualStyleBackColor = true;
+            btnCapNhat.Click += btnCapNhat_Click;
             // 
             // btnThem
             // 
@@ -270,6 +275,7 @@
             btnThem.Text = "Thêm";
             btnThem.TextAlign = ContentAlignment.BottomCenter;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // dgvKhachHang
             // 

@@ -106,7 +106,7 @@ namespace GUI_QLQuanNhau
         {
             if (e.RowIndex < 0) return;
             DataGridViewRow row = dgvKhachHang.Rows[e.RowIndex];
-            cbMaKH.SelectedValue = row.Cells["MaKH"].Value?.ToString();
+            cbMaKH.Text = row.Cells["MaKH"].Value?.ToString();
             txtTenKH.Text = row.Cells["TenKH"].Value?.ToString();
             txtSDT.Text = row.Cells["SDT"].Value?.ToString();
             txtEmail.Text = row.Cells["Email"].Value?.ToString();
@@ -117,7 +117,117 @@ namespace GUI_QLQuanNhau
             dgvKhachHang.AutoSize = true;
         }
 
-        
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string maKH = cbMaKH.Text.Trim();
+            string tenKH = txtTenKH.Text.Trim();
+            string sdt = txtSDT.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string diaChi = txtDiaChi.Text.Trim();
+            string loaiKH = cbLoaiKhachHang.Text.Trim();
+            string moTa = txtMoTa.Text.Trim();
 
+            if (string.IsNullOrEmpty(loaiKH) || string.IsNullOrEmpty(moTa))
+            {
+                MessageBox.Show("Vui lòng phân loại khách hàng hoặc mô tả.");
+                return;
+            }
+            KhachHang kh = new KhachHang
+            {
+                MaKH = maKH,
+                TenKH = tenKH,
+                Email = email,
+                SDT = sdt,
+                DiaChi = diaChi,
+                LoaiKH = loaiKH,
+                MoTa = moTa
+            };
+            BUS_KhachHang bUS_KhachHang = new BUS_KhachHang();
+            string result = bUS_KhachHang.InsertKhachHang(kh);
+
+            if (string.IsNullOrEmpty(result))
+            {
+                MessageBox.Show("Thêm khách hàng thành công");
+                ClearForm();
+                LoadDanhSachKhachHang();
+            }
+            else
+            {
+                MessageBox.Show(result);
+            }
+
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            string maKH = cbMaKH.Text.Trim();
+            string tenKH = txtTenKH.Text.Trim();
+            string sdt = txtSDT.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string diaChi = txtDiaChi.Text.Trim();
+            string loaiKH = cbLoaiKhachHang.Text.Trim();
+            string moTa = txtMoTa.Text.Trim();
+
+            KhachHang kh = new KhachHang
+            {
+                MaKH = maKH,
+                TenKH = tenKH,
+                Email = email,
+                SDT = sdt,
+                DiaChi = diaChi,
+                LoaiKH = loaiKH,
+                MoTa = moTa
+            };
+            BUS_KhachHang bUS_KhachHang = new BUS_KhachHang();
+            string result = bUS_KhachHang.UpdateKhachHang(kh);
+
+            if (string.IsNullOrEmpty(result))
+            {
+                MessageBox.Show("Cập nhật khách hàng thành công");
+                ClearForm();
+                LoadDanhSachKhachHang();
+            }
+            else
+            {
+                MessageBox.Show(result);
+            }
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string maKH = cbMaKH.Text.Trim();
+            if (string.IsNullOrEmpty(maKH))
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn mã khách hàng để xóa",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+);
+
+                return;
+            }
+            BUS_KhachHang bUS_KhachHang = new BUS_KhachHang();
+            string result = bUS_KhachHang.DeleteKhachHang(maKH);
+
+            if (string.IsNullOrEmpty(result))
+            {
+                MessageBox.Show("Xóa khách hàng thành công");
+                ClearForm();
+                LoadDanhSachKhachHang();
+            }
+            else
+            {
+                MessageBox.Show(result);
+            }
+
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+            LoadDanhSachKhachHang();
+        }
     }
 }
