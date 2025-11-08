@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO_QLQuanNhau
 {
-    internal class Mon
+    public class Mon
     {
+
     }
 }
