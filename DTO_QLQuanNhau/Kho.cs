@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QLQuanNhau
 {
-    internal class Kho
+    public class Kho
     {
     }
 }
