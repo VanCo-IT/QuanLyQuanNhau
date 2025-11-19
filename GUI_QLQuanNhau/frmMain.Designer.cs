@@ -46,8 +46,8 @@
             bànToolStripMenuItem = new ToolStripMenuItem();
             mónToolStripMenuItem = new ToolStripMenuItem();
             thanhToánToolStripMenuItem = new ToolStripMenuItem();
-            pnMain = new Panel();
             kháchHàngToolStripMenuItem = new ToolStripMenuItem();
+            pnMain = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -113,9 +113,9 @@
             // KhoHangToolStripMenuItem
             // 
             KhoHangToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { khoToolStripMenuItem, nhàCungCấpToolStripMenuItem });
-            KhoHangToolStripMenuItem.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            KhoHangToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             KhoHangToolStripMenuItem.Name = "KhoHangToolStripMenuItem";
-            KhoHangToolStripMenuItem.Size = new Size(88, 24);
+            KhoHangToolStripMenuItem.Size = new Size(84, 24);
             KhoHangToolStripMenuItem.Text = "Kho hàng";
             // 
             // khoToolStripMenuItem
@@ -123,7 +123,7 @@
             khoToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             khoToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             khoToolStripMenuItem.Name = "khoToolStripMenuItem";
-            khoToolStripMenuItem.Size = new Size(169, 24);
+            khoToolStripMenuItem.Size = new Size(180, 24);
             khoToolStripMenuItem.Text = "Kho";
             // 
             // nhàCungCấpToolStripMenuItem
@@ -131,13 +131,14 @@
             nhàCungCấpToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             nhàCungCấpToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            nhàCungCấpToolStripMenuItem.Size = new Size(169, 24);
+            nhàCungCấpToolStripMenuItem.Size = new Size(180, 24);
             nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
             // 
             // nhânViênToolStripMenuItem
             // 
+            nhânViênToolStripMenuItem.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            nhânViênToolStripMenuItem.Size = new Size(73, 24);
+            nhânViênToolStripMenuItem.Size = new Size(88, 24);
             nhânViênToolStripMenuItem.Text = "Nhân viên";
             nhânViênToolStripMenuItem.Click += nhânViênToolStripMenuItem_Click;
             // 
@@ -186,6 +187,14 @@
             thanhToánToolStripMenuItem.Text = "Thanh toán";
             thanhToánToolStripMenuItem.Click += thanhToánToolStripMenuItem_Click;
             // 
+            // kháchHàngToolStripMenuItem
+            // 
+            kháchHàngToolStripMenuItem.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
+            kháchHàngToolStripMenuItem.Size = new Size(98, 24);
+            kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            kháchHàngToolStripMenuItem.Click += kháchHàngToolStripMenuItem_Click;
+            // 
             // pnMain
             // 
             pnMain.Dock = DockStyle.Fill;
@@ -193,13 +202,6 @@
             pnMain.Name = "pnMain";
             pnMain.Size = new Size(900, 600);
             pnMain.TabIndex = 1;
-            // 
-            // kháchHàngToolStripMenuItem
-            // 
-            kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            kháchHàngToolStripMenuItem.Size = new Size(82, 24);
-            kháchHàngToolStripMenuItem.Text = "Khách hàng";
-            kháchHàngToolStripMenuItem.Click += kháchHàngToolStripMenuItem_Click;
             // 
             // frmMain
             // 
