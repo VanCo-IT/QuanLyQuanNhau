@@ -123,7 +123,7 @@
             khoToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             khoToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             khoToolStripMenuItem.Name = "khoToolStripMenuItem";
-            khoToolStripMenuItem.Size = new Size(180, 24);
+            khoToolStripMenuItem.Size = new Size(169, 24);
             khoToolStripMenuItem.Text = "Kho";
             // 
             // nhàCungCấpToolStripMenuItem
@@ -131,7 +131,7 @@
             nhàCungCấpToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 255);
             nhàCungCấpToolStripMenuItem.Font = new Font("Segoe UI", 11F);
             nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            nhàCungCấpToolStripMenuItem.Size = new Size(180, 24);
+            nhàCungCấpToolStripMenuItem.Size = new Size(169, 24);
             nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
             // 
             // nhânViênToolStripMenuItem
