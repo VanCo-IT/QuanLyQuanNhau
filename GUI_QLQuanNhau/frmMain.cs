@@ -96,5 +96,10 @@ namespace GUI_QLQuanNhau
         {
             openChildForm(new frmKhachHang());
         }
+
+        private void khoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmKho());
+        }
     }
 }
