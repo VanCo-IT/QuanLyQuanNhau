@@ -7,7 +7,7 @@ namespace DAL_QLQuanNhau
     public class DBUtil
     {
         public static string connectionString =
-        $@"Data Source={AppDomain.CurrentDomain.BaseDirectory}\CSDL_QLQuanNhau.db;Version=3;";
+        $@"Data Source={AppDomain.CurrentDomain.BaseDirectory}\CSDL_QuanNhau.db;Version=3;";
 
         public static SQLiteCommand GetCommand(string sql, List<object> args, CommandType cmdType)
         {
