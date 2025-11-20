@@ -93,7 +93,7 @@
             // 
             dateTimePicker1.Location = new Point(604, 89);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(147, 23);
+            dateTimePicker1.Size = new Size(206, 23);
             dateTimePicker1.TabIndex = 24;
             // 
             // cbSoLuong
@@ -177,7 +177,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(772, 9);
+            label9.Location = new Point(759, 9);
             label9.Name = "label9";
             label9.Size = new Size(38, 15);
             label9.TabIndex = 16;
@@ -185,10 +185,10 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(772, 27);
+            textBox2.Location = new Point(759, 27);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 85);
+            textBox2.Size = new Size(122, 49);
             textBox2.TabIndex = 15;
             // 
             // label8
