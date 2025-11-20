@@ -101,5 +101,10 @@ namespace GUI_QLQuanNhau
         {
             openChildForm(new frmKho());
         }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhaCungCap());
+        }
     }
 }
