@@ -8,10 +8,10 @@ namespace DTO_QLQuanNhau
 {
     public class NhaCungCap
     {
-        public static string MaCungCap { get; set; }
-        public static string TenNCC { get; set; }
-        public static string SDT {get;set;}
-        public static string Email { get; set; }
-        public static string DicChi { get; set; }
+        public string MaCungCap { get; set; }
+        public string TenNCC { get; set; }
+        public string SDT {get;set;}
+        public string Email { get; set; }
+        public string DiaChi { get; set; }
     }
 }
