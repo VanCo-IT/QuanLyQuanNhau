@@ -37,7 +37,7 @@ namespace DAL_QLQuanNhau
             }
             return list;
         }
-        public List<NhaCungCap> selectall()
+        public List<NhaCungCap> selectAll()
         {
             string sql = "SELECT * " + "FROM NhaCungCap";
             return SelectBySql(sql, new List<object>());
