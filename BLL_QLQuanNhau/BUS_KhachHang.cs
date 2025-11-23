@@ -40,7 +40,7 @@ namespace BLL_QLQuanNhau
             {
                 if (string.IsNullOrEmpty(kh.MaKH))
                 {
-                    return "Mã khách hàngm không hợp lệ.";
+                    return "Mã khách hàng không hợp lệ.";
                 }
 
                 dalKhachHang.updateKhachHang(kh);
