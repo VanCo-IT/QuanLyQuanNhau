@@ -95,7 +95,7 @@ namespace DAL_QLQuanNhau
         {
             try
             {
-                string sql = "DELETE FROM NhaCungCap WHERE MaNCC = @0";
+                string sql = "DELETE FROM NhaCungCap WHERE MaCungCap = @0";
                 List<object> thamSo = new List<object>();
                 thamSo.Add(maCC);
                 DBUtil.Update(sql, thamSo);
@@ -108,8 +108,8 @@ namespace DAL_QLQuanNhau
         }
         public string generateMaCungCap()
         {
-            string prefix = "MaCC";
-            string sql = "SELECT MAX(MaCC) FROM MaCungCap";
+            string prefix = "MCC";
+            string sql = "SELECT MAX(MCC) FROM NhaCungCap";
             List<object> thamSo = new List<object>();
             object result = DBUtil.ScalarQuery(sql, thamSo);
             if (result != null && result.ToString().StartsWith(prefix))
@@ -120,6 +120,20 @@ namespace DAL_QLQuanNhau
             }
 
             return $"{prefix}001";
+        }
+        public List<string> GetOnlyMaCungCap()
+        {
+            List<string> danhSachMaCungCap = new List<string>();
+            string sql = "SELECT MaCungCap FROM NhaCungCap";
+            SQLiteDataReader reader = DBUtil.Query(sql, new List<object>());
+
+            while (reader.Read())
+            {
+                string maCungCap = reader["MaCungCap"].ToString();
+                danhSachMaCungCap.Add(maCungCap);
+            }
+
+            return danhSachMaCungCap;
         }
     }
 }
