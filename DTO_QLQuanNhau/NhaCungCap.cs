@@ -10,8 +10,8 @@ namespace DTO_QLQuanNhau
     {
         public string MaCungCap { get; set; }
         public string TenNCC { get; set; }
-        public string SDT {get;set;}
         public string Email { get; set; }
+        public string SDT {get;set;}
         public string DiaChi { get; set; }
     }
 }
