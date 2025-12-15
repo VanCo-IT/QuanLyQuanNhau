@@ -43,6 +43,7 @@
             txtEmail = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
@@ -64,6 +65,7 @@
             // pnLogin
             // 
             pnLogin.BackColor = Color.Cyan;
+            pnLogin.Controls.Add(label4);
             pnLogin.Controls.Add(btnThoat);
             pnLogin.Controls.Add(btnDangNhap);
             pnLogin.Controls.Add(cbQuenMK);
@@ -207,6 +209,15 @@
             label1.TabIndex = 0;
             label1.Text = "Email";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(27, 61);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 15);
+            label4.TabIndex = 12;
+            label4.Text = "SDT: 0344951699";
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -242,5 +253,6 @@
         private Button btnDangNhap;
         private CheckBox cbQuenMK;
         private Button btnThoat;
+        private Label label4;
     }
 }
